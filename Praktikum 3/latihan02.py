@@ -1,0 +1,1 @@
+print (end="Hello world ") ; print (end="Hello world ") ; print (end="Hello world")
