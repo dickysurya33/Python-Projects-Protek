@@ -2,28 +2,41 @@
 import time
 import datetime
 
+
 # input nama user
 nama = input("Hallo... nama saya Mr. Kompie, nama Anda siapa? ")
 
 # tampilkan nama user
 print("Oh.. nama Anda", nama, ", nama yang bagus sekali.")
 
-
 # kasih jeda 3 detik
 time.sleep(3)
+
+
+def inputNumber(thnLahir):
+    while True:
+        try:
+            userInput = int(input(thnLahir))
+        except ValueError:
+            print("Maaf input yang Anda masukkan salah.")
+            continue
+        else:
+            return userInput
+            break
+
 
 # input tahun lahir
-thnLahir = int(input("BTW... " + nama + " kamu lahir tahun berapa? "))
+thnLahir = inputNumber("BTW... " + nama + " kamu lahir tahun berapa? ")
 
 # kasih jeda 3 detik
 time.sleep(3)
 
-# hitung usia user 
+# hitung usia user
 skrg = datetime.datetime.now()
 usia = skrg.year - thnLahir
 
 # tampilkan usia
-print("Hmmm...", nama,"kamu sudah", usia,"tahun ya..")
+print("Hmmm...", nama, "kamu sudah", usia, "tahun ya..")
 
 # kasih jeda 3 detik
 time.sleep(3)
@@ -47,3 +60,7 @@ time.sleep(3)
 
 # say goodbye
 print("OK.. see you later", nama, ".. senang berkenalan denganmu")
+
+# Praktikum pemrograman terstruktur
+# Dicky Surya Nanda K3520022
+# PTIK B
